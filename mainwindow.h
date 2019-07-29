@@ -28,6 +28,12 @@ private slots:
     void on_delTimerButton_clicked(); // 특정 타이머를 삭제시킨다.
     void on_delAllTimerButton_clicked(); // 모든 타이머를 삭제시킨다.
 
+    void on_stopTimerButton_clicked(); // 특정 타이머를 일시정지시킨다.
+
+    void on_playTimerButton_clicked();
+
+    void on_initTimerButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     AddTimer* addTimerForm; // 타이머 추가 폼

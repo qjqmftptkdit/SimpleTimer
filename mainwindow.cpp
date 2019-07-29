@@ -70,3 +70,30 @@ void MainWindow::on_delAllTimerButton_clicked()
     timerInfos.clear();
     ui->timerList->clear();
 }
+
+// 특정 타이머를 일시정지시킨다.
+void MainWindow::on_stopTimerButton_clicked()
+{
+    if(ui->timerList->selectedItems().size() != 0)
+    {
+        timerInfos.at(static_cast<std::vector<int>::size_type>(ui->timerList->currentRow())).timerStop();
+    }
+}
+
+// 특정 타이머를 재생시킨다.
+void MainWindow::on_playTimerButton_clicked()
+{
+    if(ui->timerList->selectedItems().size() != 0)
+    {
+        timerInfos.at(static_cast<std::vector<int>::size_type>(ui->timerList->currentRow())).timerPlay();
+    }
+}
+
+// 특정 타이머를 초기화시킨다.
+void MainWindow::on_initTimerButton_clicked()
+{
+    if(ui->timerList->selectedItems().size() != 0)
+    {
+        timerInfos.at(static_cast<std::vector<int>::size_type>(ui->timerList->currentRow())).timerInit();
+    }
+}
