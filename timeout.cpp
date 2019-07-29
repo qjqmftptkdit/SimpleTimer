@@ -8,6 +8,7 @@ TimeOut::TimeOut(QString timerName, TimerInfo timerInfo, QWidget *parent) :
 {
     ui->setupUi(this);
     ui->timerNameLabel->setText(timerName);
+    this->setFixedSize(304,158);
 
     this->setWindowState( (windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
     this->activateWindow();

@@ -9,6 +9,7 @@ AddTimer::AddTimer(std::vector<TimerInfo> &timerInfos, QListWidget *timerList, Q
     timerlist(timerList)
 {
     ui->setupUi(this);
+    this->setFixedSize(298,149);
 }
 
 AddTimer::~AddTimer()
