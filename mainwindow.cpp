@@ -102,8 +102,8 @@ void MainWindow::on_initTimerButton_clicked()
     }
 }
 
-// 타이머관련 설정을 한다.
-void MainWindow::on_pushButton_2_clicked()
+// 타이머관련 설정
+void MainWindow::on_configTimerButton_clicked()
 {
     timerSettingForm = new TimerSetting();
     timerSettingForm->show();

@@ -52,21 +52,21 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="saveTimersButton">
        <property name="text">
         <string>S</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="loadTimersButton">
        <property name="text">
         <string>L</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="configTimerButton">
        <property name="text">
         <string>C</string>
        </property>
