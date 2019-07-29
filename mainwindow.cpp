@@ -57,8 +57,11 @@ void MainWindow::countDown()
 // 특정 타이머를 삭제시킨다.
 void MainWindow::on_delTimerButton_clicked()
 {
-    timerInfos.erase(timerInfos.begin() + ui->timerList->currentRow());
-    qDeleteAll(ui->timerList->selectedItems());
+    if(ui->timerList->selectedItems().size() != 0)
+    {
+        timerInfos.erase(timerInfos.begin() + ui->timerList->currentRow());
+        qDeleteAll(ui->timerList->selectedItems());
+    }
 }
 
 // 모든 타이머를 삭제시킨다.
