@@ -8,6 +8,7 @@
 #include "addtimer.h"
 #include "timerinfo.h"
 #include "timeout.h"
+#include "timersetting.h"
 
 namespace Ui {
 class MainWindow;
@@ -34,10 +35,13 @@ private slots:
 
     void on_initTimerButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     AddTimer* addTimerForm; // 타이머 추가 폼
     TimeOut* timeoutForm; // 타임아웃 폼
+    TimerSetting* timerSettingForm; // 타이머 세팅 폼
 
     std::vector<TimerInfo> timerInfos; // 타이머 정보 저장 백터
     QTimer* countTimer; // 1초마다 실행되는 타이머

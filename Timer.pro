@@ -29,18 +29,21 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
         timeout.cpp \
-        timerinfo.cpp
+        timerinfo.cpp \
+        timersetting.cpp
 
 HEADERS += \
         addtimer.h \
         mainwindow.h \
         timeout.h \
-        timerinfo.h
+        timerinfo.h \
+        timersetting.h
 
 FORMS += \
         addtimer.ui \
         mainwindow.ui \
-        timeout.ui
+        timeout.ui \
+        timersetting.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
