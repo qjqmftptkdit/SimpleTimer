@@ -45,6 +45,9 @@ private:
 
     std::vector<TimerInfo> timerInfos; // 타이머 정보 저장 백터
     QTimer* countTimer; // 1초마다 실행되는 타이머
+
+    QString soundFilePath; // 사운드파일 위치
+    int soundVolume; // 사운드 소리
 };
 
 #endif // MAINWINDOW_H

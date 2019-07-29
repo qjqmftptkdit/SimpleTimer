@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QString>
+#include <QMediaPlayer>
 
 #include "timerinfo.h"
 
@@ -15,7 +16,7 @@ class TimeOut : public QDialog
     Q_OBJECT
 
 public:
-    explicit TimeOut(QString timerName, TimerInfo timerInfo, QWidget *parent = nullptr);
+    explicit TimeOut(QString timerName, TimerInfo timerInfo, QString soundFilePath, int soundVolume, QWidget *parent = nullptr);
     ~TimeOut();
 
 private slots:
@@ -24,6 +25,10 @@ private slots:
 private:
     Ui::TimeOut *ui;
     TimerInfo timerInfo;
+    QMediaPlayer* player;
+
+    QString soundFilePath; // 사운드파일 위치
+    int soundVolume; // 사운드 소리
 };
 
 #endif // TIMEOUT_H

@@ -14,6 +14,10 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(countTimer, SIGNAL(timeout()), this, SLOT(countDown()));
     countTimer->start(1000); // 1초마다 실행
 
+    // 기본 설정
+    soundFilePath= QCoreApplication::applicationDirPath() + "/defaultSound.wav";
+    qDebug() << soundFilePath;
+    soundVolume=50;
 }
 
 MainWindow::~MainWindow()
@@ -43,7 +47,7 @@ void MainWindow::countDown()
             {
                 ui->timerList->item(static_cast<int>(i))->setText(timerInfos[i].getTimerOut());
 
-                timeoutForm = new TimeOut(timerInfos[i].getTimerName(),timerInfos[i]);
+                timeoutForm = new TimeOut(timerInfos[i].getTimerName(),timerInfos[i],soundFilePath,soundVolume);
                 timeoutForm->show();
             }
             else if(timerText == "End") // 그후에는 무시
