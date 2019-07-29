@@ -19,27 +19,27 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>482</width>
+      <width>251</width>
       <height>41</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="addTimberButton">
+      <widget class="QPushButton" name="addTimerButton">
        <property name="text">
         <string>+</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="delTimerButton">
        <property name="text">
         <string>-</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="delAllTimerButton">
        <property name="text">
         <string>--</string>
        </property>

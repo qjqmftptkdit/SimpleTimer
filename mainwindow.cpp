@@ -21,7 +21,7 @@ MainWindow::~MainWindow()
 }
 
 // 타이머 추가창 실행
-void MainWindow::on_addTimberButton_clicked()
+void MainWindow::on_addTimerButton_clicked()
 {
     addTimerForm = new AddTimer(timerInfos, ui->timerList);
     addTimerForm->show();
@@ -51,4 +51,18 @@ void MainWindow::countDown()
                 ui->timerList->item(static_cast<int>(i))->setText(timerText);
         }
     }
+}
+
+// 특정 타이머를 삭제시킨다.
+void MainWindow::on_delTimerButton_clicked()
+{
+    timerInfos.erase(timerInfos.begin() + ui->timerList->currentRow());
+    qDeleteAll(ui->timerList->selectedItems());
+}
+
+// 모든 타이머를 삭제시킨다.
+void MainWindow::on_delAllTimerButton_clicked()
+{
+    timerInfos.clear();
+    ui->timerList->clear();
 }

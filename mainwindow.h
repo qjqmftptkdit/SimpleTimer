@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTimer>
+#include <QDebug>
 
 #include "addtimer.h"
 #include "timerinfo.h"
@@ -21,8 +22,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_addTimberButton_clicked(); // 타이머 추가창 실행
+    void on_addTimerButton_clicked(); // 타이머 추가창 실행
     void countDown(); // 1초마다 실행되어서 타이머리스트를 업데이트시킨다.
+
+    void on_delTimerButton_clicked(); // 특정 타이머를 삭제시킨다.
+    void on_delAllTimerButton_clicked(); // 모든 타이머를 삭제시킨다.
 
 private:
     Ui::MainWindow *ui;
