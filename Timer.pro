@@ -7,6 +7,7 @@
 QT       += core gui
 QT       += multimedia
 
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Timer
@@ -47,6 +48,8 @@ FORMS += \
         mainwindow.ui \
         timeout.ui \
         timersetting.ui
+
+RC_ICONS = icon.ico
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
