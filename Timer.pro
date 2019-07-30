@@ -30,6 +30,7 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
         timeout.cpp \
+        timerfilemanager.cpp \
         timerinfo.cpp \
         timersetting.cpp
 
@@ -37,6 +38,7 @@ HEADERS += \
         addtimer.h \
         mainwindow.h \
         timeout.h \
+        timerfilemanager.h \
         timerinfo.h \
         timersetting.h
 

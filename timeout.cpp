@@ -16,7 +16,7 @@ TimeOut::TimeOut(QString timerName, TimerInfo timerInfo, QString soundFilePath, 
     this->activateWindow();
 
     // 소리 재생시키기
-    player = new QMediaPlayer;
+    player = new QMediaPlayer();
     connect(player, SIGNAL(positionChanged(qint64)), this, SLOT(positionChanged(qint64)));
     player->setMedia(QUrl::fromLocalFile(soundFilePath));
     player->setVolume(soundVolume);
@@ -25,10 +25,19 @@ TimeOut::TimeOut(QString timerName, TimerInfo timerInfo, QString soundFilePath, 
 
 TimeOut::~TimeOut()
 {
+    qDebug() << "HELLO";
     delete ui;
 }
 
 void TimeOut::on_pushButton_clicked()
 {
+    player->stop();
     this->close();
+}
+
+// 윈도우 창의 취소버튼을 누를경우
+void TimeOut::closeEvent(QCloseEvent *event)
+{
+    player->stop();
+    event->accept();
 }

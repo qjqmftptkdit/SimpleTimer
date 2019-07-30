@@ -15,9 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     countTimer->start(1000); // 1초마다 실행
 
     // 기본 설정
-    soundFilePath= QCoreApplication::applicationDirPath() + "/defaultSound.wav";
-    qDebug() << soundFilePath;
-    soundVolume=50;
+    TimerFileManager().loadTimerSetting(soundFilePath,soundVolume);
 }
 
 MainWindow::~MainWindow()
@@ -105,6 +103,6 @@ void MainWindow::on_initTimerButton_clicked()
 // 타이머관련 설정
 void MainWindow::on_configTimerButton_clicked()
 {
-    timerSettingForm = new TimerSetting();
+    timerSettingForm = new TimerSetting(soundFilePath,soundVolume);
     timerSettingForm->show();
 }

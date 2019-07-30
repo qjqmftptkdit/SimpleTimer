@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QString>
 #include <QMediaPlayer>
+#include <QCloseEvent>
 
 #include "timerinfo.h"
 
@@ -18,6 +19,7 @@ class TimeOut : public QDialog
 public:
     explicit TimeOut(QString timerName, TimerInfo timerInfo, QString soundFilePath, int soundVolume, QWidget *parent = nullptr);
     ~TimeOut();
+    void closeEvent(QCloseEvent *event);
 
 private slots:
     void on_pushButton_clicked();

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>TimerConfig</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -26,7 +26,7 @@
     <string>● Timer Sound File Path</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="soundFilePathButton">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -39,9 +39,9 @@
     <string>Path</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="soundFilePath">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="geometry">
     <rect>
@@ -65,7 +65,7 @@
     <string>● Sound Volume</string>
    </property>
   </widget>
-  <widget class="QSlider" name="horizontalSlider">
+  <widget class="QSlider" name="soundVolume">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -78,7 +78,7 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="soundVolumeButton">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -102,14 +102,14 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="saveSettingButton">
       <property name="text">
        <string>SAVE</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="cancelButton">
       <property name="text">
        <string>Cancel</string>
       </property>

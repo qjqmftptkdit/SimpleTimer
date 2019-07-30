@@ -3,12 +3,12 @@
 
 #include <QMainWindow>
 #include <QTimer>
-#include <QDebug>
 
 #include "addtimer.h"
 #include "timerinfo.h"
 #include "timeout.h"
 #include "timersetting.h"
+#include "timerfilemanager.h"
 
 namespace Ui {
 class MainWindow;
