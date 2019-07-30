@@ -35,6 +35,10 @@ private slots:
 
     void on_configTimerButton_clicked(); // 타이머관련 설정
 
+    void on_saveTimersButton_clicked();
+
+    void on_loadTimersButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     AddTimer* addTimerForm; // 타이머 추가 폼

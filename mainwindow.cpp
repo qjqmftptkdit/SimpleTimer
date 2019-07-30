@@ -106,3 +106,15 @@ void MainWindow::on_configTimerButton_clicked()
     timerSettingForm = new TimerSetting(soundFilePath,soundVolume);
     timerSettingForm->show();
 }
+
+// 타이머리스트의 타이머들을 저장한다.
+void MainWindow::on_saveTimersButton_clicked()
+{
+    TimerFileManager().saveTimerList(timerInfos);
+}
+
+// 타이머리스트의 타이머들을 불러온다.
+void MainWindow::on_loadTimersButton_clicked()
+{
+    TimerFileManager().loadTimerList(timerInfos, ui->timerList);
+}

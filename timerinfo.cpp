@@ -55,3 +55,23 @@ void TimerInfo::timerPlay()
 {
     if(isStopped == true) isStopped = false;
 }
+
+// 타이머 정보를 반환한다.
+QString TimerInfo::getTimerInfo()
+{
+    QString stop = (isStopped==true) ? "T" : "F";
+    return  timerName + "/" + QString::number(hour_s) + "/" + QString::number(min_s) + "/" + QString::number(sec_s) + "/" + QString::number(timerStamp) + "/" + stop;
+}
+
+// 저장된 타이머정보를 기반으로 초기화시킨다.
+TimerInfo::TimerInfo(QString savedTimerInfo)
+{
+    QStringList TimerInfoList = savedTimerInfo.split("/");
+
+    timerName = TimerInfoList.at(0);
+    hour_s = TimerInfoList.at(1).toInt();
+    min_s = TimerInfoList.at(2).toInt();
+    sec_s = TimerInfoList.at(3).toInt();
+    timerStamp = TimerInfoList.at(4).toInt();
+    isStopped = (TimerInfoList.at(5) == "T") ? true : false ;
+}
