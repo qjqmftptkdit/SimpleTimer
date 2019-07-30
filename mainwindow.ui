@@ -32,6 +32,12 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QPushButton" name="addTimerButton">
+       <property name="toolTip">
+        <string>addTimer</string>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
        <property name="text">
         <string>+</string>
        </property>
@@ -39,6 +45,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="delTimerButton">
+       <property name="toolTip">
+        <string>delTimer</string>
+       </property>
        <property name="text">
         <string>-</string>
        </property>
@@ -46,6 +55,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="delAllTimerButton">
+       <property name="toolTip">
+        <string>delAllTimer</string>
+       </property>
        <property name="text">
         <string>--</string>
        </property>
@@ -53,6 +65,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="saveTimersButton">
+       <property name="toolTip">
+        <string>saveTimers</string>
+       </property>
        <property name="text">
         <string>S</string>
        </property>
@@ -60,6 +75,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="loadTimersButton">
+       <property name="toolTip">
+        <string>loadTimers</string>
+       </property>
        <property name="text">
         <string>L</string>
        </property>
@@ -67,6 +85,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="configTimerButton">
+       <property name="toolTip">
+        <string>config</string>
+       </property>
        <property name="text">
         <string>C</string>
        </property>
@@ -99,6 +120,9 @@
      </property>
      <item>
       <widget class="QPushButton" name="initTimerButton">
+       <property name="toolTip">
+        <string>init</string>
+       </property>
        <property name="text">
         <string>◀</string>
        </property>
@@ -106,6 +130,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="stopTimerButton">
+       <property name="toolTip">
+        <string>pause</string>
+       </property>
        <property name="text">
         <string>||</string>
        </property>
@@ -113,6 +140,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="playTimerButton">
+       <property name="toolTip">
+        <string>play</string>
+       </property>
        <property name="text">
         <string>▶</string>
        </property>
